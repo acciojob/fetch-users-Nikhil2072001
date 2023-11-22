@@ -46,7 +46,7 @@ const App = () => {
         </table>
         {
               data.length==0   && 
-                <h2> No data to display</h2>
+                <h2>No data found</h2>
               
             }
     </div>
