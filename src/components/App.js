@@ -26,7 +26,7 @@ const App = () => {
             <th>Avatar</th>
           </thead>
           <tbody>
-            {
+            { data && 
               data.map((data)=>{
                 return (
                   <tr>
@@ -40,8 +40,15 @@ const App = () => {
                 )
               })
             }
+           
+
           </tbody>
         </table>
+        {
+              data.length==0   && 
+                <h2> No data to display</h2>
+              
+            }
     </div>
   )
 }
