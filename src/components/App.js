@@ -41,7 +41,7 @@ const App = () => {
           {people.length === 0 ? (
             <tr>
               <td>
-                <b>No data found to display.</b>
+                <b>No data found</b>
               </td>
             </tr>
           ) : (
