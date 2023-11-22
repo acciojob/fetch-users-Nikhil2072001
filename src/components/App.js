@@ -16,20 +16,22 @@ const App = () => {
         {/* Do not remove the main div */}
         <nav>
           <h1>Blue Whales</h1>
-          <button className="btn" onClick={handleClick}> get User List</button>
+          <button className="btn" onClick={handleClick}>Get User List</button>
         </nav>
         <table>
           <thead className="tabhead">
+            <tr>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
             <th>Avatar</th>
+            </tr>
           </thead>
           <tbody>
-            { data && 
-              data.map((data)=>{
+            { data.length ===0 ? ("No data found to display.") : 
+              data.map((data,indx)=>{
                 return (
-                  <tr>
+                  <tr key={indx}>
                     <td>{data.first_name}</td>
                     <td>{data.last_name}</td>
                     <td>{data.email}</td>
@@ -44,11 +46,6 @@ const App = () => {
 
           </tbody>
         </table>
-        {
-              data.length==0   && 
-                <h2>No data found</h2>
-              
-            }
     </div>
   )
 }
