@@ -28,7 +28,7 @@ const App = () => {
             </tr>
           </thead>
           <tbody>
-            { data.length ===0 ? ("No data found to display.") : 
+            { data.length ===0 ? <tr><td><b>No data found to display.</b></td></tr> : 
               data.map((data,indx)=>{
                 return (
                   <tr key={indx}>
